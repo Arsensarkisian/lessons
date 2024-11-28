@@ -34,5 +34,9 @@ public class Task1 {
         System.out.println(f);
         float h = fifth - 1;
         System.out.println(h);
+        a++;
+        c--;
+        System.out.println(a);
+        System.out.println(c);
     }
 }
