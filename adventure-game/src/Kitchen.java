@@ -1,13 +1,17 @@
-public class Kitchen {
-    String name;
-    String description;
+public class Kitchen extends Room {
+
     Item [] items = {new Item("Выдвижной ящик","Верхний ящик под столешницей")};
     Kitchen(String name, String description){
-        this.name = name;
-        this.description = description;
+        super(name,description);
     }
     Kitchen(String name){
-        this.name = name;
-        this.description = "";
+        super(name);
+    }
+    void printItems() {
+
+        System.out.print("Предметы в комнате " + super.name);
+        for (Item item : items) {
+            System.out.print(" " + item);
+        }
     }
 }

@@ -1,13 +1,17 @@
-public class Bedroom {
-    String name;
-    String description;
+public class Bedroom extends Room {
+
     Item [] items = {new Item("Окно","Окно с ручкой в дальней стене"),new Item("тумбочка","Деревянная тумбочка у кровати"),new Item("Кровать","Незаправленная кровать из Икеи")};
     Bedroom(String name, String description){
-        this.name = name;
-        this.description = description;
+        super(name,description);
     }
     Bedroom(String name){
-        this.name = name;
-        this.description = "";
+        super(name);
+    }
+    void printItems() {
+
+        System.out.print("Предметы в комнате " + super.name);
+        for (Item item : items) {
+            System.out.print(" " + item);
+        }
     }
 }
