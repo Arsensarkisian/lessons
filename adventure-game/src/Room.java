@@ -1,7 +1,6 @@
 public class Room {
-    String name;
-    String description;
-    Item [] items;
+    private String name;
+    private String description;
     Room(String name, String description){
         this.name = name;
         this.description = description;
@@ -10,7 +9,23 @@ public class Room {
         this.name = name;
         this.description = "";
     }
-    void printItems(){
+    protected void printItems(){
         System.out.println("В этой комнате нет доступных предметов");
+    }
+
+     protected String getName() {
+        return name;
+    }
+
+    protected void setName(String name) {
+        this.name = name;
+    }
+
+    protected String getDescription() {
+        return description;
+    }
+
+    protected void setDescription(String description) {
+        this.description = description;
     }
 }
