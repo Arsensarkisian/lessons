@@ -1,6 +1,7 @@
-public class Room {
+public abstract class Room {
     private String name;
     private String description;
+    private Item [] items;
     Room(String name, String description){
         this.name = name;
         this.description = description;
@@ -9,23 +10,28 @@ public class Room {
         this.name = name;
         this.description = "";
     }
-    protected void printItems(){
-        System.out.println("В этой комнате нет доступных предметов");
+    public Item [] getItems() {
+        return items;
+    }
+    public void setItems(Item [] items) {
+        this.items = items;
     }
 
-     protected String getName() {
+    public abstract void printItems();
+
+     public String getName() {
         return name;
     }
 
-    protected void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    protected String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    protected void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 }

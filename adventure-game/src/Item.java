@@ -1,23 +1,23 @@
-public class Item {
+public abstract class Item {
     private String name;
     private String description;
     Item(String name, String description){
         this.name = name;
         this.description = description;
     }
-    protected String getName() {
+    public String getName() {
         return name;
     }
 
-    protected void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    protected String getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    protected void setDescription(String description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 }

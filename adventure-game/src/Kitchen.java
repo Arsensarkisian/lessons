@@ -1,16 +1,22 @@
 public class Kitchen extends Room {
-    private Item [] items = {new Item("Выдвижной ящик","Верхний ящик под столешницей")};
+   // private Item [] items = {new Item("Выдвижной ящик","Верхний ящик под столешницей")};
     Kitchen(String name, String description){
         super(name,description);
+        super.setItems(new Item[]{
+                new Furniture("Выдвижной ящик","Верхний ящик под столешницей","ящик")});
     }
     Kitchen(String name){
         super(name);
     }
-    protected void printItems() {
+
+    public void printItems() {
 
         System.out.print("Предметы в комнате " + getName());
-        for (Item item : items) {
-            System.out.print(" " + item);
+        for (Item item : getItems()) {
+            if(item != null) {
+                System.out.print(" " + item.getName());
+            }
         }
     }
+
 }
