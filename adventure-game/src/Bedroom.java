@@ -1,12 +1,12 @@
 public class Bedroom extends Room {
-    Bedroom(String name, String description){
+    public Bedroom(String name, String description){
         super(name,description);
         super.setItems(new Item[]{
                 new Window("Окно","Окно с ручкой в дальней стене","окно"),
                 new Furniture("тумбочка","Деревянная тумбочка у кровати","Просто тумбочка"),
                 new Key("Ключ синий","Сломанный ключ")});
     }
-    Bedroom(String name){
+    public Bedroom(String name){
         super(name);
     }
     public void printItems() {

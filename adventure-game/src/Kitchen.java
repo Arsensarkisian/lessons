@@ -1,10 +1,10 @@
 public class Kitchen extends Room {
-    Kitchen(String name, String description){
+    public Kitchen(String name, String description){
         super(name,description);
         super.setItems(new Item[]{
                 new Furniture("Выдвижной ящик","Верхний ящик под столешницей","ящик")});
     }
-    Kitchen(String name){
+    public Kitchen(String name){
         super(name);
     }
     public void printItems() {

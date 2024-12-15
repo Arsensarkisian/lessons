@@ -1,6 +1,6 @@
 import java.util.Objects;
 public class Key extends Item implements Collectible,Useful{
-    Key(String name, String description) {
+    public Key(String name, String description) {
         super(name, description);
     }
     @Override

@@ -1,5 +1,5 @@
 public class Bathroom extends Room{
-    Bathroom(String name, String description) {
+    public Bathroom(String name, String description) {
         super(name, description);
         super.setItems(new Item[]{
                 new Furniture("Зеркало","Круглое зеркало над раковиной","Увмдел себя в зеркале, я прекрасен"),
@@ -7,7 +7,7 @@ public class Bathroom extends Room{
                 new Key("Старинный ключ","Старый деревянный ключ"),
                 new Key("Золотой ключ","Старый золотой ключ")});
     }
-    Bathroom(String name) {
+    public Bathroom(String name) {
         super(name);
     }
     @Override

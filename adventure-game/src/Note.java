@@ -1,6 +1,6 @@
 public class Note extends Item implements Collectible,Useful{
     private String text;
-    Note(String name, String description,String text) {
+    public Note(String name, String description,String text) {
         super(name, description);
         this.text = text;
     }

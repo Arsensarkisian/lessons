@@ -34,12 +34,16 @@ public class Player {
             System.out.println(i+1 + " " + getCurrentRoom().getItems()[i].getName() + " ");
             }
         System.out.println("ВЫбирете предмет");
-        int numberOfItem = in.nextInt() - 1;
-        if(numberOfItem >= getCurrentRoom().getItems().length || numberOfItem < 0){
-            System.out.println("Нет предмета с таким номером, попробуй еще раз");
-            interact();
-
+        int numberOfItem;
+        while (true){
+            numberOfItem = in.nextInt() - 1;
+            if(numberOfItem >= getCurrentRoom().getItems().length || numberOfItem < 0){
+                System.out.println("Нет предмета с таким номером, попробуй еще раз");
+            }
+            else break;
         }
+
+
         Item selectedItem = getCurrentRoom().getItems()[numberOfItem];
         if(selectedItem instanceof Collectible){
             System.out.println("1.Положить предмет в инвентарь 2. Использовать его");
