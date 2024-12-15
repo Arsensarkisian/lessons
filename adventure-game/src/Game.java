@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class Game {
     public static boolean isGameFinished = false;
-
     private static int showMenu(){
         Scanner in = new Scanner(System.in);
         System.out.println("1. Перейти в другую комнату;\n2. Показать инвентарь\n0. Выход.");
@@ -12,7 +11,6 @@ public class Game {
         }
             return choice;
         }
-
     private static int showRooms(Room [] rooms){
         Scanner in = new Scanner(System.in);
         System.out.println("Выбрите номер комнаты:");
@@ -34,7 +32,6 @@ public class Game {
             if(isGameFinished){
                 System.out.println("Поздравляем, вы победили!");
                 break;
-
             }
             switch (showMenu()){
                 case 0:

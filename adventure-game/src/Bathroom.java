@@ -1,7 +1,4 @@
 public class Bathroom extends Room{
-    //private Item [] items = {new Item("Зеркало","Круглое зеркало над раковиной"),new Item("раковина","Белая керамическая раковина")};
-
-
     Bathroom(String name, String description) {
         super(name, description);
         super.setItems(new Item[]{
@@ -13,7 +10,6 @@ public class Bathroom extends Room{
     Bathroom(String name) {
         super(name);
     }
-
     @Override
     public void printItems() {
 
