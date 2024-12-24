@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Menu {
@@ -6,9 +7,9 @@ public class Menu {
         Scanner in = new Scanner(System.in);
         System.out.println("1. Показать все товары;\n2. Создать продукт \n0. Выход.");
         int choice = in.nextInt();
-        if(choice < 0 || choice > 2){
+        while (choice < 0 || choice > 2){
             System.out.println("Некорректный вариант. Выбирете команду еще раз");
-            showMenu();
+            choice=in.nextInt();
         }
         return choice;
     }

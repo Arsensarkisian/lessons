@@ -1,11 +1,11 @@
 public class Product {
     private String name;
     private String description;
-    private int price;
+    private double price;
     private Categories productCategories;
 
 
-    public Product(String name, String description, int price, Categories productCategories){
+    public Product(String name, String description, double price, Categories productCategories){
         this.name = name;
         this.description = description;
         this.price = price;
@@ -27,10 +27,10 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
     public String getProductCategories() {

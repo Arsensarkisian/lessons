@@ -1,9 +1,17 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Application {
-    private static Product [] products = new Product[10];
+    public static Product [] products = null;
+
     public static boolean isAplicationFinished = false;
     public static void main(String[] args) {
+
+        try {
+            products = FileUtil.readProducts();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         Scanner in = new Scanner(System.in);
 
         while (true){
@@ -29,9 +37,11 @@ public class Application {
                     for(int i = 0; i < products.length; i++){
                         if(products[i] == null){
                             products[i] = product;
+                            FileUtil.saveProducts(products[i]);
                             break;
                         }
                     }
+
                     break;
                 default:
                     System.out.println("Некорректный вариант");
